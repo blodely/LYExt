@@ -7,12 +7,21 @@
 //
 
 import UIKit
+import LYExt
+
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+		
+		do {
+			let view = UIView.init(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+			self.view.addSubview(view)
+			view.border1Px()
+		}
+		
     }
 
     override func didReceiveMemoryWarning() {
