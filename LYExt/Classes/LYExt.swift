@@ -32,6 +32,8 @@ import UIKit
 
 struct LYExtCt {
 	
+	static let Width: CGFloat = UIScreen.main.bounds.size.width
+	static let Height: CGFloat = UIScreen.main.bounds.size.height
 	static let Scale: CGFloat = UIScreen.main.scale
 	static let Pixel1: CGFloat = 1 / LYExtCt.Scale
 }
