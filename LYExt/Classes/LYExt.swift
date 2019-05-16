@@ -30,16 +30,26 @@
 import Foundation
 import UIKit
 
+
+/// Library constant.
 struct LYExtCt {
 	
+	/// screen width.
 	static let Width: CGFloat = UIScreen.main.bounds.size.width
+	
+	/// screen height.
 	static let Height: CGFloat = UIScreen.main.bounds.size.height
+	
+	/// screen scale.
 	static let Scale: CGFloat = UIScreen.main.scale
+	
+	/// one pixel.
 	static let Pixel1: CGFloat = 1 / LYExtCt.Scale
 }
 
 extension UIView {
 	
+	/// make current view instance display a one pixel width border with tint color.
 	public func border1Px() {
 		self.layer.borderWidth = LYExtCt.Pixel1
 		self.layer.borderColor = self.tintColor.cgColor
