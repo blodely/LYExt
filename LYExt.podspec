@@ -20,6 +20,7 @@ The extensions for iOS developing in Swift
   s.social_media_url = 'https://weibo.com/blodely'
 
   s.ios.deployment_target = '11.0'
+  s.swift_version = '5.0'
 
   s.source_files = 'LYExt/Classes/**/*'
   
