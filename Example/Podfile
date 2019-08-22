@@ -2,6 +2,7 @@ platform :ios, '12.0'
 inhibit_all_warnings!
 
 use_frameworks!
+project './LYExt.xcodeproj'
 
 target 'LYExt_Example' do
   pod 'LYExt', :path => '../'
