@@ -54,6 +54,11 @@ extension UIView {
 		self.layer.borderWidth = LYExtCt.Pixel1
 		self.layer.borderColor = self.tintColor.cgColor
 	}
+	
+	public func bordered(withWidth width: CGFloat, andColor color: UIColor) {
+		self.layer.borderColor = color.cgColor
+		self.layer.borderWidth = width
+	}
 
 	public func roundedCornerRadius(radius: CGFloat) {
 		self.layer.masksToBounds = true
