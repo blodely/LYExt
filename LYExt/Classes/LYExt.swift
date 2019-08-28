@@ -32,19 +32,19 @@ import UIKit
 
 
 /// Library constant.
-struct LYExtCt {
+public struct LYExtCt {
 	
 	/// screen width.
-	static let Width: CGFloat = UIScreen.main.bounds.size.width
+	public static let Width: CGFloat = UIScreen.main.bounds.size.width
 	
 	/// screen height.
-	static let Height: CGFloat = UIScreen.main.bounds.size.height
+	public static let Height: CGFloat = UIScreen.main.bounds.size.height
 	
 	/// screen scale.
-	static let Scale: CGFloat = UIScreen.main.scale
+	public static let Scale: CGFloat = UIScreen.main.scale
 	
 	/// one pixel.
-	static let Pixel1: CGFloat = 1 / LYExtCt.Scale
+	public static let Pixel1: CGFloat = 1 / LYExtCt.Scale
 }
 
 extension UIView {
