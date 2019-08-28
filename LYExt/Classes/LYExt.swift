@@ -45,6 +45,9 @@ public struct LYExtCt {
 	
 	/// one pixel.
 	public static let Pixel1: CGFloat = 1 / LYExtCt.Scale
+	
+	public static let SaftTop: CGFloat = UIScreen.main.bounds.size.height > 811 ? 44 : 20
+	public static let SaftBottom: CGFloat = UIScreen.main.bounds.size.height > 811 ? 34 : 0
 }
 
 extension UIView {
