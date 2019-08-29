@@ -32,7 +32,8 @@ import UIKit
 
 extension UIImage {
 	
-	public func template(named name: String) {
-		return UIImage.init(named: name)?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate)
+	convenience init?(templateNamed name: String) {
+		self.init(named: name)
+		withRenderingMode(UIImage.RenderingMode.alwaysTemplate)
 	}
 }
