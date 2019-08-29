@@ -48,6 +48,9 @@ public struct LYExtCt {
 	
 	public static let SaftTop: CGFloat = UIScreen.main.bounds.size.height > 811 ? 44 : 20
 	public static let SaftBottom: CGFloat = UIScreen.main.bounds.size.height > 811 ? 34 : 0
+	
+	public static let Animate: CGFloat = 0.25
+	public static let GoldenRatio: CGFloat = 0.618
 }
 
 extension UIView {
