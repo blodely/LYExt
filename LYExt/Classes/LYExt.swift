@@ -35,19 +35,28 @@ import UIKit
 public struct LYExtCt {
 	
 	/// screen width.
-	public static let Width: CGFloat = UIScreen.main.bounds.size.width
+	public static var width: CGFloat {
+		UIScreen.main.bounds.size.width
+	}
+	
 	
 	/// screen height.
-	public static let Height: CGFloat = UIScreen.main.bounds.size.height
+	public static var height: CGFloat {
+		UIScreen.main.bounds.size.height
+	}
 	
 	/// screen scale.
-	public static let Scale: CGFloat = UIScreen.main.scale
+	public static var scale: CGFloat {
+		UIScreen.main.scale
+	}
 	
 	/// one pixel.
-	public static let Pixel1: CGFloat = 1 / LYExtCt.Scale
+	public static var pixel1: CGFloat {
+		1 / LYExtCt.scale
+	}
 	
-	public static let SaftTop: CGFloat = UIScreen.main.bounds.size.height > 811 ? 44 : 20
-	public static let SaftBottom: CGFloat = UIScreen.main.bounds.size.height > 811 ? 34 : 0
+//	public static let SaftTop: CGFloat = UIScreen.main.bounds.size.height > 811 ? 44 : 20
+//	public static let SaftBottom: CGFloat = UIScreen.main.bounds.size.height > 811 ? 34 : 0
 	
 	public static let Animate: CGFloat = 0.25
 	public static let GoldenRatio: CGFloat = 0.618
@@ -57,7 +66,7 @@ extension UIView {
 	
 	/// make current view instance display a one pixel width border with tint color.
 	public func border1Px() {
-		self.layer.borderWidth = LYExtCt.Pixel1
+		self.layer.borderWidth = LYExtCt.pixel1
 		self.layer.borderColor = self.tintColor.cgColor
 	}
 	

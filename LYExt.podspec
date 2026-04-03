@@ -4,11 +4,13 @@
 
 Pod::Spec.new do |s|
   s.name             = 'LYExt'
-  s.version          = '0.1.0'
+  s.version          = '0.2.0'
   s.summary          = 'LYExt.'
 
   s.description      = <<-DESC
 The extensions for iOS developing in Swift
+0.2.0 Support Swift 6.x
+0.1.0 Support Swift 5.x
                        DESC
 
   s.homepage         = 'https://github.com/blodely/LYExt'
@@ -19,8 +21,8 @@ The extensions for iOS developing in Swift
   
   s.social_media_url = 'https://weibo.com/blodely'
 
-  s.ios.deployment_target = '11.0'
-  s.swift_version = '5.0'
+  s.ios.deployment_target = '15.0'
+  s.swift_version = '6.0'
 
   s.source_files = 'LYExt/Classes/**/*'
   
