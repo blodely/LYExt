@@ -1,6 +1,6 @@
 //
 //  UIImageExt.swift
-//	LYExt
+//  LYExt
 //
 //	Created by Luo Yu on 2019-08-29.
 //	Email: indie.luo@gmail.com
@@ -27,12 +27,11 @@
 //	CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
-import Foundation
 import UIKit
 
-extension UIImage {
+public extension UIImage {
 	
-	convenience init?(templateNamed name: String) {
+	public convenience init?(templateNamed name: String) {
 		self.init(named: name)
 		withRenderingMode(UIImage.RenderingMode.alwaysTemplate)
 	}

@@ -1,8 +1,8 @@
 //
-//	LYExt.swift
-//	LYExt
+//  UIViewExt.swift
+//  LYExt
 //
-//	Created by Luo Yu on 2019-04-23.
+//	Created by Luo Yu on 2019-04-24.
 //	Email: indie.luo@gmail.com
 //
 //	The MIT License (MIT)
@@ -27,42 +27,9 @@
 //	CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
-import Foundation
 import UIKit
 
-
-/// Library constant.
-public struct LYExtCt {
-	
-	/// screen width.
-	public static var width: CGFloat {
-		UIScreen.main.bounds.size.width
-	}
-	
-	
-	/// screen height.
-	public static var height: CGFloat {
-		UIScreen.main.bounds.size.height
-	}
-	
-	/// screen scale.
-	public static var scale: CGFloat {
-		UIScreen.main.scale
-	}
-	
-	/// one pixel.
-	public static var pixel1: CGFloat {
-		1 / LYExtCt.scale
-	}
-	
-//	public static let SaftTop: CGFloat = UIScreen.main.bounds.size.height > 811 ? 44 : 20
-//	public static let SaftBottom: CGFloat = UIScreen.main.bounds.size.height > 811 ? 34 : 0
-	
-	public static let Animate: CGFloat = 0.25
-	public static let GoldenRatio: CGFloat = 0.618
-}
-
-extension UIView {
+public extension UIView {
 	
 	/// make current view instance display a one pixel width border with tint color.
 	public func border1Px() {
