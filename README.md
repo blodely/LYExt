@@ -1,23 +1,23 @@
 # LYExt
 
-## Example
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
 ## Requirements
+
+0.3.0 SPM
 
 ## Installation
 
-LYExt is available through [CocoaPods](https://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+LYExt is now available only through [Swift Package Manager](). To install
+it, open 'File' > 'Add Package Dependencies..', enter Package URL in the search field at top-right corner:
 
-```ruby
-pod 'LYExt'
+```text
+https://github.com/blodely/LYExt.git
 ```
+
+then add LYExt lib to your project.
 
 ## Author
 
-Luo Yu ([blodely](http://luoyu.space)), indie.luo@gmail.com
+Luo Yu ([blodely](https://luoyu.space)), indie.luo@gmail.com
 
 ## License
 
