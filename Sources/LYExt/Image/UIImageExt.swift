@@ -31,7 +31,7 @@ import UIKit
 
 public extension UIImage {
 	
-	public convenience init?(templateNamed name: String) {
+	convenience init?(templateNamed name: String) {
 		self.init(named: name)
 		withRenderingMode(UIImage.RenderingMode.alwaysTemplate)
 	}

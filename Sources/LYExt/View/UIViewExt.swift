@@ -32,17 +32,17 @@ import UIKit
 public extension UIView {
 	
 	/// make current view instance display a one pixel width border with tint color.
-	public func border1Px() {
+	func border1Px() {
 		self.layer.borderWidth = LYExtCt.pixel1
 		self.layer.borderColor = self.tintColor.cgColor
 	}
 	
-	public func bordered(withWidth width: CGFloat, andColor color: UIColor) {
+	func bordered(withWidth width: CGFloat, andColor color: UIColor) {
 		self.layer.borderColor = color.cgColor
 		self.layer.borderWidth = width
 	}
 
-	public func roundedCornerRadius(radius: CGFloat) {
+	func roundedCornerRadius(radius: CGFloat) {
 		self.layer.masksToBounds = true
 		self.layer.cornerRadius = radius
 	}
