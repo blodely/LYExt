@@ -46,4 +46,19 @@ public extension UIView {
 		self.layer.masksToBounds = true
 		self.layer.cornerRadius = radius
 	}
+	
+	func roundedShadow(
+		cornerRadius: CGFloat,
+		color: UIColor = .black,
+		opacity: Float = 0.2,
+		offset: CGSize = CGSize(width: 0, height: 4),
+		radius: CGFloat = 8
+	) {
+		layer.cornerRadius = cornerRadius
+		layer.shadowColor = color.cgColor
+		layer.shadowOpacity = opacity
+		layer.shadowOffset = offset
+		layer.shadowRadius = radius
+		layer.masksToBounds = false
+	}
 }
