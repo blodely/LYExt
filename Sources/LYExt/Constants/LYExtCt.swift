@@ -34,22 +34,26 @@ import UIKit
 public struct LYExtCt {
 	
 	/// screen width.
+	@MainActor
 	public static var width: CGFloat {
 		UIScreen.main.bounds.size.width
 	}
 	
 	
 	/// screen height.
+	@MainActor
 	public static var height: CGFloat {
 		UIScreen.main.bounds.size.height
 	}
 	
 	/// screen scale.
+	@MainActor
 	public static var scale: CGFloat {
 		UIScreen.main.scale
 	}
 	
 	/// one pixel.
+	@MainActor
 	public static var pixel1: CGFloat {
 		1 / LYExtCt.scale
 	}
