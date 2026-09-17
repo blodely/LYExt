@@ -94,7 +94,7 @@ open class LYStackScrollView: UIView {
 				view.leadingAnchor.constraint(equalTo: scrollview!.contentLayoutGuide.leadingAnchor, constant: paddingH),
 				view.trailingAnchor.constraint(equalTo: scrollview!.contentLayoutGuide.trailingAnchor, constant: paddingH),
 				
-				view.widthAnchor.constraint(equalTo: scrollview!.frameLayoutGuide.widthAnchor),
+				view.widthAnchor.constraint(equalTo: scrollview!.frameLayoutGuide.widthAnchor, constant: -paddingH * 2),
 			])
 		}
 	}
