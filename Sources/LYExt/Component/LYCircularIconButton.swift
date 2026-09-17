@@ -29,7 +29,7 @@
 
 import UIKit
 
-final class LYCircularIconButton: UIButton {
+public final class LYCircularIconButton: UIButton {
 
 	// MARK: - PROPERTIES
 	private let buttonSize: CGFloat
@@ -38,7 +38,7 @@ final class LYCircularIconButton: UIButton {
 
 	// MARK: - INIT
 
-	init(
+	public init(
 		systemName: String = "",
 		buttonSize: CGFloat = 44,
 		iconPointSize: CGFloat = 18
@@ -96,12 +96,12 @@ final class LYCircularIconButton: UIButton {
 	}
 
 	/// Layout
-	override var intrinsicContentSize: CGSize {
+	public override var intrinsicContentSize: CGSize {
 		CGSize(width: buttonSize, height: buttonSize)
 	}
 
 	/// Touch Animation
-	override var isHighlighted: Bool {
+	public override var isHighlighted: Bool {
 		didSet {
 			UIView.animate(
 				withDuration: 0.12,
