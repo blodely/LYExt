@@ -34,7 +34,17 @@ open class LYStackScrollView: UIView {
 	public weak var scrollview: UIScrollView?
 	public weak var stackview: UIStackView?
 	
+	private var paddingH: CGFloat = 0
+	private var spacing: CGFloat = 0
+	
 	// MARK: - INIT
+	init(spacing: CGFloat = 0, paddingH: CGFloat = 0) {
+		super.init(frame: .zero)
+		self.spacing = spacing
+		self.paddingH = paddingH
+		initial()
+	}
+	
 	public override init(frame: CGRect) {
 		super.init(frame: frame)
 		initial()
@@ -74,15 +84,15 @@ open class LYStackScrollView: UIView {
 			view.translatesAutoresizingMaskIntoConstraints = false
 			view.axis = .vertical
 			view.alignment = .fill
-			view.spacing = 10
+			view.spacing = spacing
 			scrollview!.addSubview(view)
 			stackview = view
 			
 			NSLayoutConstraint.activate([
 				view.topAnchor.constraint(equalTo: scrollview!.contentLayoutGuide.topAnchor),
 				view.bottomAnchor.constraint(equalTo: scrollview!.contentLayoutGuide.bottomAnchor),
-				view.leadingAnchor.constraint(equalTo: scrollview!.contentLayoutGuide.leadingAnchor),
-				view.trailingAnchor.constraint(equalTo: scrollview!.contentLayoutGuide.trailingAnchor),
+				view.leadingAnchor.constraint(equalTo: scrollview!.contentLayoutGuide.leadingAnchor, constant: paddingH),
+				view.trailingAnchor.constraint(equalTo: scrollview!.contentLayoutGuide.trailingAnchor, constant: -paddingH),
 				
 				view.widthAnchor.constraint(equalTo: scrollview!.frameLayoutGuide.widthAnchor),
 			])

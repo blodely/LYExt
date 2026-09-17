@@ -29,53 +29,30 @@
 
 import UIKit
 
-public final class LYEqualWidthHStack: UIView {
-	
-	private weak var stackview: UIStackView?
-	
-	private var spacing: CGFloat = 0
-	private var padding: CGFloat = 0
+public final class LYEqualWidthHStack: UIStackView {
 	
 	// MARK: - INIT
-	public init(views: [UIView], spacing: CGFloat = 0, padding: CGFloat = 0) {
+	public init(views: [UIView], spacing: CGFloat = 0) {
 		super.init(frame: .zero)
-		
-		self.spacing = spacing
-		self.padding = padding
-		
-		initial(views: views)
+		initial(views: views, spacing: spacing)
 	}
 	
-	required init?(coder: NSCoder) {
+	required init(coder: NSCoder) {
 		super.init(coder: coder)
 		initial(views: [])
 	}
 	
-	private func initial(views: [UIView]) {
+	private func initial(views: [UIView], spacing: CGFloat = 0) {
 		
 		do {
-			backgroundColor = .clear
-		}
-		
-		do {
-			let view = UIStackView()
-			view.axis = .horizontal
-			view.distribution = .fillEqually
-			view.spacing = spacing
-			view.backgroundColor = .clear
-			addSubview(view)
-			stackview = view
-			
+			self.axis = .horizontal
+			self.distribution = .fillEqually
+			self.spacing = spacing
+			self.backgroundColor = .clear
+
 			for one in views {
-				view.addArrangedSubview(one)
+				self.addArrangedSubview(one)
 			}
-			
-			NSLayoutConstraint.activate([
-				view.leftAnchor.constraint(equalTo: leftAnchor, constant: padding),
-				view.rightAnchor.constraint(equalTo: rightAnchor, constant: -padding),
-				view.topAnchor.constraint(equalTo: topAnchor),
-				view.bottomAnchor.constraint(equalTo: bottomAnchor),
-			])
 		}
 	}
 }
