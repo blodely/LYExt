@@ -29,7 +29,7 @@
 
 import UIKit
 
-public class LYStackScrollView: UIView {
+open class LYStackScrollView: UIView {
 	
 	public weak var scrollview: UIScrollView?
 	public weak var stackview: UIStackView?
@@ -45,7 +45,7 @@ public class LYStackScrollView: UIView {
 		initial()
 	}
 	
-	public func initial() {
+	open func initial() {
 		
 		do {
 			backgroundColor = .clear
