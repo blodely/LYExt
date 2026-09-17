@@ -38,7 +38,7 @@ open class LYStackScrollView: UIView {
 	private var spacing: CGFloat = 0
 	
 	// MARK: - INIT
-	init(spacing: CGFloat = 0, paddingH: CGFloat = 0) {
+	public init(spacing: CGFloat = 0, paddingH: CGFloat = 0) {
 		super.init(frame: .zero)
 		self.spacing = spacing
 		self.paddingH = paddingH
