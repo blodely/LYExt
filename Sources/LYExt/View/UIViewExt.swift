@@ -61,4 +61,15 @@ public extension UIView {
 		layer.shadowRadius = radius
 		layer.masksToBounds = false
 	}
+	
+	/// Find first responder view
+	func findFirstResponder() -> UIView? {
+		if isFirstResponder { return self }
+		for subview in subviews {
+			if let firstResponder = subview.findFirstResponder() {
+				return firstResponder
+			}
+		}
+		return nil
+	}
 }
