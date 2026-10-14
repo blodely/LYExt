@@ -72,4 +72,16 @@ public extension UIView {
 		}
 		return nil
 	}
+	
+	/// Find view controller
+	func findViewController() -> UIViewController? {
+		var responder: UIResponder? = self
+		while let nextResponder = responder?.next {
+			if let viewController = nextResponder as? UIViewController {
+				return viewController
+			}
+			responder = nextResponder
+		}
+		return nil
+	}
 }
